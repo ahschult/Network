@@ -1,0 +1,30 @@
+graph TD
+    ISP --> Switch1
+    ISP --> Switch2
+    Switch1 --> PC[Gaming PC
+    Ryzen 7, 64GB RAM]
+    PC --> TS[TailScale]
+    Switch1 --> Work[Work Laptop]
+    Switch1 --> Proxmox[Proxmox 1]
+    Proxmox --> UB[Ubuntu]
+    Proxmox --> ManV[ManGos Vanilla WoW]
+    Proxmox --> ManTBC[ManGos TBC WoW]
+    
+    
+    Switch2 --> R720a[R720 - AI
+    2x Xeon E5 2698 V3, 
+    192GB DDR4, 
+    2 x Mi50 Instinct]
+    R720a --> Oll[Ollama]
+    Switch2 --> MN[6 x Mi50 Instinct
+    128GB DDR3]
+    MN --> TS
+    R720a --> TS[TailScale]
+    Switch2 --> R720b
+    Switch2 --> TRUENAS[TRUENAS - MAIN
+    8 x 4TiB, RAID1]
+    TRUENAS --> iM[Immich]
+    TRUENAS --> Plex[Plex]
+    TRUENAS --> TS[TailScale]
+    TRUENAS --> Share[SMB Share]
+    TRUENAS --> Back[Backups]
